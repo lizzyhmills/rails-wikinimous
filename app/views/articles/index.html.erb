@@ -1,0 +1,9 @@
+<div>
+  <ul class="list-unstyled">
+    <% @articles.each do |article| %>
+      <li><h5><%= link_to article.title, article_path(article)%></h5></li>
+      <li><%= article.content.truncate_words(30)%></li>
+      <br>
+    <% end %>
+  </ul>
+</div>
